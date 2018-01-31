@@ -17,10 +17,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   },
 
   [SYMBOL_LEVEL_ONE] = {
-    {KC_ESC,  _______,  _______,  _______, _______, _______, _______, _______,  _______,   KC_HASH, KC_SLASH,  _______},
-    {KC_AMPR,  KC_LBRC,  KC_LCBR,  KC_RCBR, KC_LPRN, KC_PEQL, KC_ASTR, KC_RPRN,  KC_RBRC,  KC_EXLM,  KC_MINS,  KC_BSLS},
+    {KC_ESC,  KC_AMPR,  _______,  _______, _______, _______, _______, _______,  _______,   KC_HASH, KC_SLASH,  _______},
+    {KC_LCTRL,  KC_LBRC,  KC_LCBR,  KC_RCBR, KC_LPRN, KC_PEQL, KC_ASTR, KC_RPRN,  KC_RBRC,  KC_EXLM,  KC_MINS,  KC_BSLS},
     {KC_LSFT,  _______,  _______,  _______, _______, _______, _______, _______,  _______,  _______,  _______,  _______},
-    {_______,  _______,  _______,  _______, _______, _______, _______, _______,  _______,  _______,  _______,  _______}
+    {_______,  _______,  _______,  KC_LALT, _______, _______, _______, _______,  _______,  _______,  _______,  _______}
   },
 
   [SYMBOL_LEVEL_TWO] = {
