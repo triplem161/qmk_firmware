@@ -1,5 +1,6 @@
 #include "planck.h"
 
+#define MMM_SPC LT(SYMBOL, KC_SPC)
 enum LAYER {
   DVORAK,
   SYMBOL,
@@ -16,14 +17,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * |------+------+------+------+------+------+------+------+------+------+------+------|
    * | Shift|   "  |   Q  |   J  |   K  |   X  |   B  |   M  |   W  |   V  |   Z  |Enter |
    * |------+------+------+------+------+------+------+------+------+------+------+------|
-   * |      |      | GUI  | Alt  | Spc  | Symb |      |NumPad|      |      |      |      |
+   * |      |      | GUI  | Alt  | MMM  |      |      |NumPad|      |      |      |      |
    * `-----------------------------------------------------------------------------------'
    */
   [DVORAK] = {
     {KC_TAB,   KC_SCOLON,KC_COMM,  KC_DOT,  KC_P,   KC_Y,     KC_F,     KC_G,     KC_C,     KC_R,     KC_L,     KC_BSPACE},
     {KC_LCTRL, KC_A,     KC_O,     KC_E,    KC_U,   KC_I,     KC_D,     KC_H,     KC_T,     KC_N,     KC_S,     KC_MINS},
     {KC_LSFT,  KC_QUOT,  KC_Q,     KC_J,    KC_K,   KC_X,     KC_B,     KC_M,     KC_W,     KC_V,     KC_Z,     KC_ENTER},
-    {_______,  _______,  KC_LGUI,  KC_LALT, KC_SPC, MO(SYMBOL),  _______,  MO(NUMPAD),_______,  _______,  _______, _______}
+    {_______,  _______,  KC_LGUI,  KC_LALT, MMM_SPC, _______,  _______,  MO(NUMPAD),_______,  _______,  _______, _______}
   },
 
   /* Symbol
@@ -39,7 +40,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    */
   [SYMBOL] = {
     {KC_ESC,  KC_AMPR, KC_PERC,  KC_GRV, _______, _______, _______, _______,  KC_CIRCUMFLEX,   KC_AT, KC_HASH, KC_SLASH},
-    {KC_LCTRL,  KC_LBRC,  KC_LCBR,  KC_RCBR, KC_LPRN, KC_PEQL, KC_ASTR, KC_RPRN, KC_PLUS , KC_RBRC,  KC_EXLM,  KC_BSLS},
+    {KC_LCTRL,  KC_LBRC,  KC_LCBR,  KC_RCBR, KC_LPRN, KC_EQL, KC_ASTR, KC_RPRN, KC_PLUS , KC_RBRC,  KC_EXLM,  KC_BSLS},
     {KC_LSFT,  _______,  _______,  _______, _______, _______, _______, _______,  _______,  _______,  _______,  _______},
     {_______,  _______,  _______,  KC_LALT, _______, _______, _______, _______,  _______,  _______,  MAGIC_UNSWAP_LALT_LGUI,  MAGIC_SWAP_LALT_LGUI}
   },
